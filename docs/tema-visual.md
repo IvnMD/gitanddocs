@@ -48,3 +48,47 @@ code = "Jetbrains Mono"
 
 - `text`: tipografía del cuerpo de texto.
 - `code`: tipografía monoespaciada para bloques de código.
+
+Ambas aceptan cualquier fuente de Google Fonts. Para no cargar fuentes externas (por ejemplo, por privacidad de datos) y usar las del sistema:
+
+```toml
+[project.theme]
+font = false
+```
+
+## Idioma
+
+```toml
+[project.theme]
+language = "en"
+```
+
+Cambia `"en"` por el código del idioma deseado (Zensical soporta más de 60).
+
+## Logo e iconos
+
+```toml
+[project.theme]
+logo = "images/logo.png"
+favicon = "images/favicon.png"
+```
+
+- `logo`: imagen propia dentro de la carpeta `docs/` (`.png`, `.svg`, etc.).
+- `favicon`: igual, imagen dentro de `docs/`.
+
+También se puede usar un icono del propio paquete de iconos del tema en lugar de una imagen:
+
+```toml
+[project.theme.icon]
+logo = "lucide/smile"
+```
+
+## Cabecera (header)
+
+```toml
+[project.theme]
+features = [
+  "header.autohide",
+  "announce.dismiss",
+]
+```
