@@ -92,3 +92,43 @@ features = [
   "announce.dismiss",
 ]
 ```
+
+- `header.autohide`: oculta la cabecera automáticamente al hacer scroll hacia abajo, dejando más espacio para el contenido.
+- `announce.dismiss`: permite al usuario cerrar el banner de anuncio; no vuelve a mostrarse hasta que cambie su contenido.
+
+## Pie de página (footer)
+
+```toml
+[project.theme]
+features = [
+  "navigation.footer",
+]
+
+[[project.extra.social]]
+icon = "fontawesome/brands/github"
+link = "https://github.com/monium/gitanddocs"
+
+[project]
+copyright = "Copyright &copy; 2026 Nombre del proyecto"
+
+[project.extra]
+generator = false
+```
+
+- `navigation.footer`: muestra enlaces a la página anterior/siguiente en el pie.
+- `project.extra.social`: lista de redes/enlaces sociales (icono + URL) que aparecen en el footer.
+- `copyright`: texto de copyright personalizado.
+- `generator = false`: oculta el aviso "Hecho con Zensical" del pie de página.
+
+## Enlace al repositorio
+
+```toml
+[project]
+repo_url = "https://github.com/monium/gitanddocs"
+repo_name = "monium/gitanddocs"
+
+[project.theme.icon]
+repo = "fontawesome/brands/github"
+```
+
+Al configurar `repo_url`, Zensical muestra un enlace al repositorio junto al buscador, y si es GitHub o GitLab, obtiene automáticamente la última versión publicada, el número de estrellas y de forks.
